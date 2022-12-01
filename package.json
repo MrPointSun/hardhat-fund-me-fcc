@@ -1,4 +1,7 @@
 {
+  "name": "hardhat-fund-me",
+  "author": "MrP01ntSun",
+  "version": "1.0.0",
   "devDependencies": {
     "@chainlink/contracts": "^0.5.1",
     "@ethersproject/abi": "^5.4.7",
@@ -20,5 +23,13 @@
   },
   "dependencies": {
     "solhint": "^3.3.7"
+  },
+  "scripts": {
+    "test": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network goerli",
+    "lint": "yarn solhint 'contracts/*.sol'",
+    "lint:fix": "yarn solhint 'contracts/*.sol' --fix",
+    "format": "yarn prettier --write .",
+    "coverage": "yarn hardhat coverage"
   }
 }
